@@ -1,0 +1,12 @@
+.btn{
+ background-color: #ffffff;
+}
+.btn:hover{
+    background-color: #F0F2FF;
+}
+
+@media only screen and (max-width: 1920px){
+  #customer-from{
+      width: 800px;
+  }
+}

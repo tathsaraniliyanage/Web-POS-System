@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Document</title>
+    <link href="assets/bootstrap/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+          integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+          referrerpolicy="no-referrer" rel="stylesheet"/>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+    <link href="assets/index.css" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+<section class="d-flex flex-wrap flex-row vh-100">
+    <section class="w-25 d-flex flex-column flex-wrap gap-0">
+        <div class="d-flex justify-content-center align-items-center" style="height: 60px;">
+            <span class="text-primary fw-bold" style="font-size: 20px">FOOD CITY</span>
+        </div>
+
+        <button class="border-0 d-flex justify-content-start align-items-center p-0 btn" id="btn-home">
+            <div style="width:10px;height: 100%" class="rounded-2"></div>
+            <i class="fa-solid fa-house m-3"></i>
+            <span style="font-size: 20px">Home</span>
+        </button>
+        <button class="border-0 d-flex justify-content-start align-items-center p-0 btn" id="btn-custom">
+            <div style="width:10px;height: 100%" class="rounded-2"></div>
+            <i class="fa-solid fa-user m-3"></i>
+            <span style="font-size: 20px">Customer</span>
+        </button>
+        <button class="border-0 d-flex justify-content-start align-items-center p-0 btn" id="btn-item">
+            <div style="width:10px;height: 100%" class="rounded-2"></div>
+            <i class="fa-solid fa-boxes-stacked m-3"></i>
+            <span style="font-size: 20px">Item</span>
+        </button>
+        <button class="border-0 d-flex justify-content-start align-items-center p-0 btn" id="btn-order">
+            <div style="width:10px;height: 100%" class="rounded-2"></div>
+            <i class="fa-solid fa-cart-shopping m-3"></i>
+            <span style="font-size: 20px">Order</span>
+        </button>
+    </section>
+    <section class="w-75 vh-100 " style="background-color: #F4F5FA">
+
+        <section class="w-100 h-100 " id="home">
+            <span style="font-size:40px">Home</span>
+        </section>
+
+        <section class="w-100 h-100 " id="item">
+            <span style="font-size:40px">Item</span>
+        </section>
+
+        <section class="w-100 h-100 p-5 d-flex flex-column justify-content-start pt-0" id="customer">
+
+            <div style="height: 60px ;" class="d-flex justify-content-start align-items-center mb-3">
+                <span style="font-size:20px;font-weight:600 ">Customer</span>
+            </div>
+
+            <div id="customer-form" class="bg-white p-3 rounded-3 mb-5">
+                <form id="myForm">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="id">
+                                 <i class="fa-solid fa-user" style="color: #8A8B8F;margin-left: 10px"></i>
+                                <span id="customer-from-id" style="margin-right: 10px"></span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="username">@</span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" id="usernameInput">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Full Name" aria-label="Username" aria-describedby="basic-addon1" id="fullNameInput">
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Street" id="streetInput">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Lane" id="laneInput">
+                        </div>
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="City" aria-label="Username" aria-describedby="basic-addon1" id="cityInput">
+                    </div>
+
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Recipient's Gmail" aria-label="Recipient's username" aria-describedby="basic-addon2" id="emailInput">
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="basic-addon2">@gmail.com</span>
+                        </div>
+                    </div>
+
+                    <button id="btn-customer-form-submit" type="submit" style="height: 44px ;width: 100px;font-weight: 600"  class="btn-primary border-0 rounded-3">Submit</button>
+                </form>
+            </div>
+
+            <div class="container p-4 bg-white rounded-3 m-0">
+                <table id="customerTable" class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th>Username</th>
+                        <th>Full Name</th>
+                        <th>Street</th>
+                        <th>Lane</th>
+                        <th>City</th>
+                        <th>Email</th>
+                        <th><i class="fa-solid fa-square-minus"></i></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <section class="w-100 h-100 " id="order">
+            <span style="font-size:40px">Order</span>
+        </section>
+
+    </section>
+</section>
+
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<script src="assets/js/db/db.js"></script>
+<script src="assets/js/navigation/navigation.js"></script>
+<script src="assets/js/controller/customerFrom.js"></script>
+</body>
+
+</html>
