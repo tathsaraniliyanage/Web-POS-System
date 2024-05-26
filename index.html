@@ -8,61 +8,598 @@
     <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
           integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
           referrerpolicy="no-referrer" rel="stylesheet"/>
-
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     </style>
     <link href="assets/index.css" rel="stylesheet">
 
 
-
 </head>
 
 <body>
-<section class="d-flex flex-wrap flex-row vh-100">
-    <section class="w-25 d-flex flex-column flex-wrap gap-0">
+<section class="d-flex bd-highlight flex-row vh-100">
+    <section class="d-flex flex-column flex-wrap gap-0 vh-100" style="width: 300px;">
         <div class="d-flex justify-content-center align-items-center" style="height: 60px;">
             <span class="text-primary fw-bold" style="font-size: 20px">FOOD CITY</span>
         </div>
 
         <button class="border-0 d-flex justify-content-start align-items-center p-0 btn" id="btn-home">
-            <div style="width:10px;height: 100%" class="rounded-2"></div>
+            <div class="rounded-2" style="width:10px;height: 100%"></div>
             <i class="fa-solid fa-house m-3"></i>
             <span style="font-size: 20px">Home</span>
         </button>
         <button class="border-0 d-flex justify-content-start align-items-center p-0 btn" id="btn-custom">
-            <div style="width:10px;height: 100%" class="rounded-2"></div>
+            <div class="rounded-2" style="width:10px;height: 100%"></div>
             <i class="fa-solid fa-user m-3"></i>
             <span style="font-size: 20px">Customer</span>
         </button>
         <button class="border-0 d-flex justify-content-start align-items-center p-0 btn" id="btn-item">
-            <div style="width:10px;height: 100%" class="rounded-2"></div>
+            <div class="rounded-2" style="width:10px;height: 100%"></div>
             <i class="fa-solid fa-boxes-stacked m-3"></i>
             <span style="font-size: 20px">Item</span>
         </button>
         <button class="border-0 d-flex justify-content-start align-items-center p-0 btn" id="btn-order">
-            <div style="width:10px;height: 100%" class="rounded-2"></div>
+            <div class="rounded-2" style="width:10px;height: 100%"></div>
             <i class="fa-solid fa-cart-shopping m-3"></i>
             <span style="font-size: 20px">Order</span>
         </button>
     </section>
-    <section class="w-75 vh-100 " style="background-color: #F4F5FA">
 
-        <section class="w-100 h-100 " id="home">
-            <span style="font-size:40px">Home</span>
+    <section class="h-100 flex-shrink-1 justify-content-center w-100 d-flex gap-4 flex-wrap bd-highlight "
+             style="background-color: #F4F5FA;">
+        <section class="w-100 h-100 flex-column justify-content-start  p-4" id="home">
+
+            <span style="font-size:20px">| <i class="fa-solid fa-house m-2"></i>Home</span>
+            <!-- 			Search bar  -->
+            <section
+                    class="shadow-sm rounded-3 p-3 mt-3 mb-3 d-flex flex-row flex-wrap gap-2 align-items-center justify-content-center"
+                    style="height: 250px; position: relative; background-color: #ffffff ">
+                <div class="input-group rounded d-flex flex-wrap" style="width: 200px; position: relative;">
+                    <h5>Cart Check out <i class="fa-brands fa-opencart"></i></h5>
+                    <img src="assets/img/image-cart.png" width="100%">
+                </div>
+                <div class="d-flex flex-row flex-wrap justify-content-center align-items-center">
+                    <div style="width: 300px ;">
+                        <input class="rounded-3 p-1" data-ic="" id="home-searchInput" placeholder="enter item code"
+                               type="text">
+                        <h4 id="home-search-name">Item Name</h4>
+                        <span id="home-search-description">Lorem ipsum dolor sit amet, consectetur </span>
+                        <h2 id="home-search-price">LKR 00.00</h2>
+                    </div>
+                    <div class="d-flex flex-wrap justify-content-center align-items-center"
+                         style="height: 175px;position: relative;">
+                        <img alt="" height="128px" id="home-search-img" src="assets/img/ice-cream.png">
+                    </div>
+                </div>
+                <hr class="rounded-3" style="border: solid 2px;height: 80%;margin-left: 20px">
+                <div class="d-flex flex-row flex-wrap justify-content-center align-items-center">
+                    <div id="customer-detail-box" style="width: 300px ;padding-left: 20px;padding-right: 20px">
+                        <input class="rounded-3 p-1" id="home-customer-search" placeholder="enter item code"
+                               type="text">
+                        <span style="font-size: 10px;display: block">Name : </span>
+                        <h4 id="customer-search-box-name"></h4>
+                        <span style="font-size: 10px;display: block">E mail : </span>
+                        <h6 id="customer-search-box-email" style="font-size: 12px"></h6>
+                        <span style="font-size: 10px;display: block">Address : </span>
+                        <span id="customer-search-box-address" style="font-size: 12px"></span>
+                    </div>
+                </div>
+                <hr class="rounded-3" style="border: solid 2px;height: 80%;margin-right: 20px">
+                <div class="d-flex flex-wrap justify-content-start">
+                    <div class="total-box d-flex flex-column gap-1 justify-content-start">
+                        <div>
+                            <i class="fa-solid fa-money-bill-wave" style="margin-right: 10px"></i>
+                            <input class="border-0" id="cart-payment-balance" placeholder="Type your Amount"
+                                   type="text">
+                        </div>
+                        <span id="cart-balance" style="display: block;"><i class="fa-solid fa-money-bill-1"
+                                                                           style="margin-right: 10px"></i> Balance : 00.00</span>
+                        <span id="home-total-balance"
+                              style=" font-size: 25px; margin-top: 10px;">Total : LKR 00.00 </span>
+                        <button class="pay-btn" id="pay-button" onclick="pay()">Pay Now <i
+                                class="fa-regular fa-money-bill-1"></i></button>
+                    </div>
+                </div>
+                <div class="rounded-circle d-flex flex-column flex-wrap justify-content-center align-items-center"
+                     style="background-color: #606BDD;height: 125px;width: 125px;color: #ffffff">
+                    <i class="fa-solid fa-cart-arrow-down" style="font-size: 35px"></i>
+                    <h2 id="home-order-count">0+</h2>
+                </div>
+            </section>
+            <!--            Content body-->
+            <section class="d-flex bd-highlight">
+                <!--                cart check out      -->
+                <section
+                        class="p-2 flex-shrink-1 justify-content-start w-100 d-flex gap-4 flex-wrap bd-highlight overflow-auto"
+                        id="content-body" style="height:calc(100vh - 375px)">
+
+                    <!--<div class="body rounded-3 shadow d-flex flex-wrap p-3 justify-content-start gap-2 flex-column"
+                         style="width: 260px;  background-color: #f3f6ff; height: fit-content;">
+
+                        <div class="d-flex flex-column">
+                            <span style="font-weight: 500; font-size: 20px;color: #464646; padding: 0%; margin: 0;">Ice cream</span>
+                            <span style="font-weight: 400; font-size: 13px;color: #464646;">Vanila Ice cream</span>
+                        </div>
+                        <img alt="" src="assets/img/ice-cream.png" width="100%">
+
+                        <div class="d-flex flex-wrap justify-content-center gap-3 w-100">
+                            <button class="rounded-3 border-0 text-white fw-bold d-flex align-items-center btn-qty">
+                                <span style="margin: 0;padding: 0;">-</span>
+                            </button>
+                            <span style="margin: 0; padding: 0;">1000</span>
+                            <button class="rounded-3 border-0 text-white fw-bold d-flex align-items-center btn-qty">
+                                <span style="margin: 0;padding: 0;">+</span>
+                            </button>
+                        </div>
+
+
+                        <button class="add-to-cart-btn border-0">
+
+                            <span style="width: fit-content;">LKR 1040.00</span>
+
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="body rounded-3 shadow d-flex flex-wrap p-3 justify-content-start gap-2 flex-column"
+                         style="width: 260px;  background-color: #f3f6ff; height: fit-content;">
+
+                        <div class="d-flex flex-column">
+                            <span style="font-weight: 500; font-size: 20px;color: #464646; padding: 0%; margin: 0;">Ice cream</span>
+                            <span style="font-weight: 400; font-size: 13px;color: #464646;">Vanila Ice cream</span>
+                        </div>
+                        <img alt="" src="assets/img/ice-cream.png" width="100%">
+
+                        <div class="d-flex flex-wrap justify-content-center gap-3 w-100">
+                            <button class="rounded-3 border-0 text-white fw-bold d-flex align-items-center btn-qty">
+                                <span style="margin: 0;padding: 0;">-</span>
+                            </button>
+                            <span style="margin: 0; padding: 0;">1000</span>
+                            <button class="rounded-3 border-0 text-white fw-bold d-flex align-items-center btn-qty">
+                                <span style="margin: 0;padding: 0;">+</span>
+                            </button>
+                        </div>
+
+
+                        <button class="add-to-cart-btn border-0">
+
+                            <span style="width: fit-content;">LKR 1040.00</span>
+
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="body rounded-3 shadow d-flex flex-wrap p-3 justify-content-start gap-2 flex-column"
+                         style="width: 260px;  background-color: #f3f6ff; height: fit-content;">
+
+                        <div class="d-flex flex-column">
+                            <span style="font-weight: 500; font-size: 20px;color: #464646; padding: 0%; margin: 0;">Ice cream</span>
+                            <span style="font-weight: 400; font-size: 13px;color: #464646;">Vanila Ice cream</span>
+                        </div>
+                        <img alt="" src="assets/img/ice-cream.png" width="100%">
+
+                        <div class="d-flex flex-wrap justify-content-center gap-3 w-100">
+                            <button class="rounded-3 border-0 text-white fw-bold d-flex align-items-center btn-qty">
+                                <span style="margin: 0;padding: 0;">-</span>
+                            </button>
+                            <span style="margin: 0; padding: 0;">1000</span>
+                            <button class="rounded-3 border-0 text-white fw-bold d-flex align-items-center btn-qty">
+                                <span style="margin: 0;padding: 0;">+</span>
+                            </button>
+                        </div>
+
+
+                        <button class="add-to-cart-btn border-0">
+
+                            <span style="width: fit-content;">LKR 1040.00</span>
+
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="body rounded-3 shadow d-flex flex-wrap p-3 justify-content-start gap-2 flex-column"
+                         style="width: 260px;  background-color: #f3f6ff; height: fit-content;">
+
+                        <div class="d-flex flex-column">
+                            <span style="font-weight: 500; font-size: 20px;color: #464646; padding: 0%; margin: 0;">Ice cream</span>
+                            <span style="font-weight: 400; font-size: 13px;color: #464646;">Vanila Ice cream</span>
+                        </div>
+                        <img alt="" src="assets/img/ice-cream.png" width="100%">
+
+                        <div class="d-flex flex-wrap justify-content-center gap-3 w-100">
+                            <button class="rounded-3 border-0 text-white fw-bold d-flex align-items-center btn-qty">
+                                <span style="margin: 0;padding: 0;">-</span>
+                            </button>
+                            <span style="margin: 0; padding: 0;">1000</span>
+                            <button class="rounded-3 border-0 text-white fw-bold d-flex align-items-center btn-qty">
+                                <span style="margin: 0;padding: 0;">+</span>
+                            </button>
+                        </div>
+
+
+                        <button class="add-to-cart-btn border-0">
+
+                            <span style="width: fit-content;">LKR 1040.00</span>
+
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="body rounded-3 shadow d-flex flex-wrap p-3 justify-content-start gap-2 flex-column"
+                         style="width: 260px;  background-color: #f3f6ff; height: fit-content;">
+
+                        <div class="d-flex flex-column">
+                            <span style="font-weight: 500; font-size: 20px;color: #464646; padding: 0%; margin: 0;">Ice cream</span>
+                            <span style="font-weight: 400; font-size: 13px;color: #464646;">Vanila Ice cream</span>
+                        </div>
+                        <img alt="" src="assets/img/ice-cream.png" width="100%">
+
+                        <div class="d-flex flex-wrap justify-content-center gap-3 w-100">
+                            <button class="rounded-3 border-0 text-white fw-bold d-flex align-items-center btn-qty">
+                                <span style="margin: 0;padding: 0;">-</span>
+                            </button>
+                            <span style="margin: 0; padding: 0;">1000</span>
+                            <button class="rounded-3 border-0 text-white fw-bold d-flex align-items-center btn-qty">
+                                <span style="margin: 0;padding: 0;">+</span>
+                            </button>
+                        </div>
+
+
+                        <button class="add-to-cart-btn border-0">
+
+                            <span style="width: fit-content;">LKR 1040.00</span>
+
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="body rounded-3 shadow d-flex flex-wrap p-3 justify-content-start gap-2 flex-column"
+                         style="width: 260px;  background-color: #f3f6ff; height: fit-content;">
+
+                        <div class="d-flex flex-column">
+                            <span style="font-weight: 500; font-size: 20px;color: #464646; padding: 0%; margin: 0;">Ice cream</span>
+                            <span style="font-weight: 400; font-size: 13px;color: #464646;">Vanila Ice cream</span>
+                        </div>
+                        <img alt="" src="assets/img/ice-cream.png" width="100%">
+
+                        <div class="d-flex flex-wrap justify-content-center gap-3 w-100">
+                            <button class="rounded-3 border-0 text-white fw-bold d-flex align-items-center btn-qty">
+                                <span style="margin: 0;padding: 0;">-</span>
+                            </button>
+                            <span style="margin: 0; padding: 0;">1000</span>
+                            <button class="rounded-3 border-0 text-white fw-bold d-flex align-items-center btn-qty">
+                                <span style="margin: 0;padding: 0;">+</span>
+                            </button>
+                        </div>
+
+
+                        <button class="add-to-cart-btn border-0">
+
+                            <span style="width: fit-content;">LKR 1040.00</span>
+
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="body rounded-3 shadow d-flex flex-wrap p-3 justify-content-start gap-2 flex-column"
+                         style="width: 260px;  background-color: #f3f6ff; height: fit-content;">
+
+                        <div class="d-flex flex-column">
+                            <span style="font-weight: 500; font-size: 20px;color: #464646; padding: 0%; margin: 0;">Ice cream</span>
+                            <span style="font-weight: 400; font-size: 13px;color: #464646;">Vanila Ice cream</span>
+                        </div>
+                        <img alt="" src="assets/img/ice-cream.png" width="100%">
+
+                        <div class="d-flex flex-wrap justify-content-center gap-3 w-100">
+                            <button class="rounded-3 border-0 text-white fw-bold d-flex align-items-center btn-qty">
+                                <span style="margin: 0;padding: 0;">-</span>
+                            </button>
+                            <span style="margin: 0; padding: 0;">1000</span>
+                            <button class="rounded-3 border-0 text-white fw-bold d-flex align-items-center btn-qty">
+                                <span style="margin: 0;padding: 0;">+</span>
+                            </button>
+                        </div>
+
+
+                        <button class="add-to-cart-btn border-0">
+
+                            <span style="width: fit-content;">LKR 1040.00</span>
+
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="body rounded-3 shadow d-flex flex-wrap p-3 justify-content-start gap-2 flex-column"
+                         style="width: 260px;  background-color: #f3f6ff; height: fit-content;">
+
+                        <div class="d-flex flex-column">
+                            <span style="font-weight: 500; font-size: 20px;color: #464646; padding: 0%; margin: 0;">Ice cream</span>
+                            <span style="font-weight: 400; font-size: 13px;color: #464646;">Vanila Ice cream</span>
+                        </div>
+                        <img alt="" src="assets/img/ice-cream.png" width="100%">
+
+                        <div class="d-flex flex-wrap justify-content-center gap-3 w-100">
+                            <button class="rounded-3 border-0 text-white fw-bold d-flex align-items-center btn-qty">
+                                <span style="margin: 0;padding: 0;">-</span>
+                            </button>
+                            <span style="margin: 0; padding: 0;">1000</span>
+                            <button class="rounded-3 border-0 text-white fw-bold d-flex align-items-center btn-qty">
+                                <span style="margin: 0;padding: 0;">+</span>
+                            </button>
+                        </div>
+
+
+                        <button class="add-to-cart-btn border-0">
+
+                            <span style="width: fit-content;">LKR 1040.00</span>
+
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="body rounded-3 shadow d-flex flex-wrap p-3 justify-content-start gap-2 flex-column"
+                         style="width: 260px;  background-color: #f3f6ff; height: fit-content;">
+
+                        <div class="d-flex flex-column">
+                            <span style="font-weight: 500; font-size: 20px;color: #464646; padding: 0%; margin: 0;">Ice cream</span>
+                            <span style="font-weight: 400; font-size: 13px;color: #464646;">Vanila Ice cream</span>
+                        </div>
+                        <img alt="" src="assets/img/ice-cream.png" width="100%">
+
+                        <div class="d-flex flex-wrap justify-content-center gap-3 w-100">
+                            <button class="rounded-3 border-0 text-white fw-bold d-flex align-items-center btn-qty">
+                                <span style="margin: 0;padding: 0;">-</span>
+                            </button>
+                            <span style="margin: 0; padding: 0;">1000</span>
+                            <button class="rounded-3 border-0 text-white fw-bold d-flex align-items-center btn-qty">
+                                <span style="margin: 0;padding: 0;">+</span>
+                            </button>
+                        </div>
+
+
+                        <button class="add-to-cart-btn border-0">
+
+                            <span style="width: fit-content;">LKR 1040.00</span>
+
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="body rounded-3 shadow d-flex flex-wrap p-3 justify-content-start gap-2 flex-column"
+                         style="width: 260px;  background-color: #f3f6ff; height: fit-content;">
+
+                        <div class="d-flex flex-column">
+                            <span style="font-weight: 500; font-size: 20px;color: #464646; padding: 0%; margin: 0;">Ice cream</span>
+                            <span style="font-weight: 400; font-size: 13px;color: #464646;">Vanila Ice cream</span>
+                        </div>
+                        <img alt="" src="assets/img/ice-cream.png" width="100%">
+
+                        <div class="d-flex flex-wrap justify-content-center gap-3 w-100">
+                            <button class="rounded-3 border-0 text-white fw-bold d-flex align-items-center btn-qty">
+                                <span style="margin: 0;padding: 0;">-</span>
+                            </button>
+                            <span style="margin: 0; padding: 0;">1000</span>
+                            <button class="rounded-3 border-0 text-white fw-bold d-flex align-items-center btn-qty">
+                                <span style="margin: 0;padding: 0;">+</span>
+                            </button>
+                        </div>
+
+
+                        <button class="add-to-cart-btn border-0">
+
+                            <span style="width: fit-content;">LKR 1040.00</span>
+
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="body rounded-3 shadow d-flex flex-wrap p-3 justify-content-start gap-2 flex-column"
+                         style="width: 260px;  background-color: #f3f6ff; height: fit-content;">
+
+                        <div class="d-flex flex-column">
+                            <span style="font-weight: 500; font-size: 20px;color: #464646; padding: 0%; margin: 0;">Ice cream</span>
+                            <span style="font-weight: 400; font-size: 13px;color: #464646;">Vanila Ice cream</span>
+                        </div>
+                        <img alt="" src="assets/img/ice-cream.png" width="100%">
+
+                        <div class="d-flex flex-wrap justify-content-center gap-3 w-100">
+                            <button class="rounded-3 border-0 text-white fw-bold d-flex align-items-center btn-qty">
+                                <span style="margin: 0;padding: 0;">-</span>
+                            </button>
+                            <span style="margin: 0; padding: 0;">1000</span>
+                            <button class="rounded-3 border-0 text-white fw-bold d-flex align-items-center btn-qty">
+                                <span style="margin: 0;padding: 0;">+</span>
+                            </button>
+                        </div>
+
+
+                        <button class="add-to-cart-btn border-0">
+
+                            <span style="width: fit-content;">LKR 1040.00</span>
+
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="body rounded-3 shadow d-flex flex-wrap p-3 justify-content-start gap-2 flex-column"
+                         style="width: 260px;  background-color: #f3f6ff; height: fit-content;">
+
+                        <div class="d-flex flex-column">
+                            <span style="font-weight: 500; font-size: 20px;color: #464646; padding: 0%; margin: 0;">Ice cream</span>
+                            <span style="font-weight: 400; font-size: 13px;color: #464646;">Vanila Ice cream</span>
+                        </div>
+                        <img alt="" src="assets/img/ice-cream.png" width="100%">
+
+                        <div class="d-flex flex-wrap justify-content-center gap-3 w-100">
+                            <button class="rounded-3 border-0 text-white fw-bold d-flex align-items-center btn-qty">
+                                <span style="margin: 0;padding: 0;">-</span>
+                            </button>
+                            <span style="margin: 0; padding: 0;">1000</span>
+                            <button class="rounded-3 border-0 text-white fw-bold d-flex align-items-center btn-qty">
+                                <span style="margin: 0;padding: 0;">+</span>
+                            </button>
+                        </div>
+
+
+                        <button class="add-to-cart-btn border-0">
+
+                            <span style="width: fit-content;">LKR 1040.00</span>
+
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </button>
+
+                    </div>-->
+
+                </section>
+                <!--                item list body      -->
+                <section class="p-3" id="cart-from">
+                    <!-- <h5>Cart Check out <i class="fa-brands fa-opencart"></i></h5>
+
+                     <div class="total-box d-flex flex-column gap-2">
+                         <div>
+                             <i class="fa-solid fa-money-bill-wave m-2"></i>
+                             <input class="border-0" placeholder="Type your Amount" type="text">
+                         </div>
+                         <span style="display: block;"><i
+                                 class="fa-solid fa-money-bill-1 m-2"></i>Balance : 00.00</span>
+                         <span style=" font-size: 25px; margin-top: 20px;">Total : LKR 1000.00 </span>
+                     </div>
+                     <button class="pay-btn">Pay Now <i class="fa-regular fa-money-bill-1"></i></button>-->
+                    <!--<div class="d-flex flex-wrap justify-content-start align-items-center justify-content-between gap-2  bg-white p-3 rounded-3" style="width: 100%;height: 100px">
+
+                        <div class="d-flex flex-row gap-3">
+                            <div class="d-flex flex-wrap justify-content-center align-items-center rounded-3"
+                                 style="height: 50px;width:50px;position: relative;">
+                                <img alt="" height="50px" src="assets/img/ice-cream.png">
+                            </div>
+                            <div>
+                                <h5>Item Name</h5>
+                                <h6><span style="font-size: 12px">Item qty : </span>2</h6>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="rounded-circle p-3 border-0">
+                                <img src="assets/img/icons8-remove.png" class="m-0 p-0" alt="remove icon" width="20px">
+                            </button>
+                        </div>
+                    </div>-->
+                    <h6 style="color: #575757;font-weight: 600">No Selected ON Cart Items</h6>
+                </section>
+
+            </section>
+
         </section>
 
-        <section class="w-100 h-100 " id="item">
-            <span style="font-size:40px">Item</span>
+        <section class="w-100 h-100 p-4" id="item">
+            <span style="font-size:20px;margin-left: 19px"><i class="fa-solid fa-boxes-stacked"></i> | item</span>
+            <section class="d-flex bd-highlight">
+                <!--                cart check out      -->
+                <section class="p-3 flex-shrink-1 justify-content-start w-100 d-flex gap-4 flex-wrap bd-highlight"
+                         style="height:calc(100vh - 100px) ;">
+                    <div class="form-outline mb-1 w-100" data-mdb-input-init>
+                        <input  class="form-control w-50" id="datatable-search-input-item" placeholder="Search" type="search">
+                    </div>
+                    <div class="p-4 bg-white w-100" id="datatable" style="height: calc(100vh - 170px);">
+                        <table class="table" id="itemTable" style="width: 100%;">
+                            <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th>code</th>
+                                <th>Item</th>
+                                <th>qty</th>
+                                <th>price</th>
+                                <th>Description</th>
+                                <th><i class="fa-solid fa-grip-lines"></i></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                        <div class="d-flex gap-3 justify-content-center align-items-center">
+                            <button  onclick="previous()" style="width: 30px" class="border-0 p-1 rounded-3"> < </button>
+                            <span id="itemListPageCount"> 1 </span>
+                            <button onclick="nextItemList()" style="width: 30px" class="border-0 p-1 rounded-3"> > </button>
+                        </div>
+                    </div>
+                </section>
+                <!--                item list body      -->
+                <section class="p-3" style="width: 25%;">
+
+                    <div class="d-flex justify-content-start align-items-end p-4 rounded-3 flex-column bg-white" style="margin-top: 65px">
+                        <div class="w-100">
+                            <div class="mb-3">
+                                <span style="font-size: 14px">Item</span>
+                                <input id="item-from-name" aria-describedby="basic-addon1" aria-label="Username" class="form-control" placeholder="name for item" type="text">
+                            </div>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" >Qty</span>
+                            </div>
+                            <input id="item-from-qty" aria-describedby="basic-addon1" aria-label="Username" class="form-control" placeholder="00" type="text">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" >LKR</span>
+                            </div>
+                            <input id="item-from-price" aria-describedby="basic-addon1" aria-label="Username" class="form-control" placeholder="00.00" type="text">
+                        </div>
+
+                        <div class="w-100">
+                            <div class="mb-3">
+                                <span style="font-size: 14px">Description</span>
+                                <textarea id="item-from-description" style="height: 200px ;font-size: 14px" aria-describedby="basic-addon1" aria-label="Description" class="form-control" placeholder="Type Something your item for description"></textarea>
+                            </div>
+                        </div>
+
+                        <form class="rounded-3 w-100 mb-3" style="border: solid 2px grey; border-style: dashed ;height: 200px;position: relative;overflow: hidden">
+                            <div id="file-upload-form-information" class="rounded-3 d-flex justify-content-center flex-column align-items-center position-absolute" style="width: 100%;height: 100%">
+                                <i class="fa-solid fa-image d-block" style="font-size: 50px;color: grey"></i>
+                                <span class="d-block"
+                                      style="color: grey;font-size: 20px;font-weight: 500">Drop files here</span>
+                                <span class="d-block" style="color: grey;font-size: 16px;font-weight: 500">or</span>
+                                <span class="d-block"
+                                      style="color: grey;font-size: 20px;font-weight: 500">click to upload</span>
+                            </div>
+                            <input id="fileUploader" class="position-absolute" style="width: 100%;height: calc(100% + 30px) ;top: -30px"
+                                   type="file">
+
+                            <div class="rounded-3 d-flex justify-content-center align-items-center" style="width: 100%;height: 100%">
+                                <img id="preview" class="rounded-3" height="100%"  src="">
+                            </div>
+                        </form>
+
+                        <button id="item-submit-button" data-itemcode="" onclick="submitOnAction(this)" class="btn-primary border-0 rounded-3"
+                                style="height: 44px ;width: 100px;font-weight: 600" type="submit">
+                            Submit
+                        </button>
+                    </div>
+
+                </section>
+
+            </section>
         </section>
 
-        <section class="w-100 h-100 p-5 d-flex flex-column justify-content-start pt-0" id="customer">
+        <section class="w-100 h-100 flex-column justify-content-start pt-0 p-4" id="customer">
 
-            <div style="height: 60px ;" class="d-flex justify-content-start align-items-center mb-3">
+            <div class="d-flex justify-content-center align-items-center mb-3" style="height: 60px ;">
                 <span style="font-size:20px;font-weight:600 ">Customer</span>
             </div>
 
-            <div id="customer-form" class="bg-white p-3 rounded-3 mb-5">
+            <div class="bg-white p-3 rounded-3 mb-5 w-100" id="customer-form">
                 <form id="myForm">
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
@@ -77,39 +614,48 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="username">@</span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" id="usernameInput">
+                        <input aria-describedby="basic-addon1" aria-label="Username" class="form-control"
+                               id="usernameInput"
+                               placeholder="Username" type="text">
                     </div>
 
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Full Name" aria-label="Username" aria-describedby="basic-addon1" id="fullNameInput">
+                        <input aria-describedby="basic-addon1" aria-label="Username" class="form-control"
+                               id="fullNameInput"
+                               placeholder="Full Name" type="text">
                     </div>
 
                     <div class="row mb-3">
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Street" id="streetInput">
+                            <input class="form-control" id="streetInput" placeholder="Street" type="text">
                         </div>
                         <div class="col">
-                            <input type="text" class="form-control" placeholder="Lane" id="laneInput">
+                            <input class="form-control" id="laneInput" placeholder="Lane" type="text">
                         </div>
                     </div>
 
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="City" aria-label="Username" aria-describedby="basic-addon1" id="cityInput">
+                        <input aria-describedby="basic-addon1" aria-label="Username" class="form-control" id="cityInput"
+                               placeholder="City" type="text">
                     </div>
 
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Recipient's Gmail" aria-label="Recipient's username" aria-describedby="basic-addon2" id="emailInput">
+                        <input aria-describedby="basic-addon2" aria-label="Recipient's username" class="form-control"
+                               id="emailInput" placeholder="Recipient's Gmail" type="text">
                         <div class="input-group-append">
                             <span class="input-group-text" id="basic-addon2">@gmail.com</span>
                         </div>
                     </div>
 
-                    <button id="btn-customer-form-submit" type="submit" style="height: 44px ;width: 100px;font-weight: 600"  class="btn-primary border-0 rounded-3">Submit</button>
+                    <button class="btn-primary border-0 rounded-3" id="btn-customer-form-submit"
+                            style="height: 44px ;width: 100px;font-weight: 600" type="submit">
+                        Submit
+                    </button>
                 </form>
             </div>
 
             <div class="container p-4 bg-white rounded-3 m-0">
-                <table id="customerTable" class="table">
+                <table class="table" id="customerTable">
                     <thead>
                     <tr>
                         <th scope="col">#</th>
@@ -129,8 +675,176 @@
 
         </section>
 
-        <section class="w-100 h-100 " id="order">
-            <span style="font-size:40px">Order</span>
+        <section class="w-100 h-100 p-4" id="order">
+            <span style="font-size:20px"><i class="fa-solid fa-box-open"></i> | Order</span>
+
+            <section class="d-flex bd-highlight">
+                <!--                cart check out      -->
+                <section class="p-3 flex-shrink-1 justify-content-start w-100 d-flex gap-4 flex-wrap bd-highlight overflow-auto"
+                         id="order-table-section"
+                         style="height:calc(100vh - 100px) ;">
+                    <div class="container p-4 bg-white rounded-3 m-0">
+                        <table class="table" id="orderTable">
+                            <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th>Customer</th>
+                                <th>Date</th>
+                                <th>time</th>
+                                <th>Items</th>
+                                <th>Total</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                <!--                item list body      -->
+                <section class="p-3" id="Order-detail-from">
+
+                    <button class="rounded-3 border-0" onclick="closeDetails()"><i
+                            class="fa-solid fa-arrow-right-from-bracket"></i></button>
+
+                    <span style="font-size: 10px;display: block">Name : </span>
+                    <h6 id="order-customer-box-name"> sdsdsssds</h6>
+                    <span style="font-size: 10px;display: block">E mail : </span>
+                    <h6 id="order-customer-box-email" style="font-size: 12px">dsdsdsdssd</h6>
+                    <span style="font-size: 10px;display: block">Address : </span>
+                    <span id="order-customer-box-address" style="font-size: 12px">dsdsdssdsdsd</span>
+
+                    <div class="overflow-scroll p-2" id="order-detail-from-itemList-section"
+                         style="height:calc(100vh - 300px) ;background-color: #f7f5fd">
+                        <!--<div class="d-flex flex-row justify-content-start align-items-center gap-2 bg-white mb-2 rounded-3"  style="width: 300px;padding-left: 15px">
+                            <div class="d-flex flex-wrap justify-content-center align-items-center rounded-3" style="height: 50px;width:50px;position: relative;">
+                                <img alt="" height="50px" src="assets/img/ice-cream.png">
+                            </div>
+                            <div>
+                                <span style="font-size: 15px">Item Name</span>
+                                <h6><span style="font-size: 10px">Item qty : </span>2</h6>
+                            </div>
+                            <hr style="border: solid 1px; height: 50px;">
+                            <span>LKR 1200.00</span>
+                        </div>
+                        <div class="d-flex flex-row justify-content-start align-items-center gap-2 bg-white mb-2 rounded-3"  style="width: 300px;padding-left: 15px">
+                            <div class="d-flex flex-wrap justify-content-center align-items-center rounded-3" style="height: 50px;width:50px;position: relative;">
+                                <img alt="" height="50px" src="assets/img/ice-cream.png">
+                            </div>
+                            <div>
+                                <span style="font-size: 15px">Item Name</span>
+                                <h6><span style="font-size: 10px">Item qty : </span>2</h6>
+                            </div>
+                            <hr style="border: solid 1px; height: 50px;">
+                            <span>LKR 1200.00</span>
+                        </div>
+                        <div class="d-flex flex-row justify-content-start align-items-center gap-2 bg-white mb-2 rounded-3"  style="width: 300px;padding-left: 15px">
+                            <div class="d-flex flex-wrap justify-content-center align-items-center rounded-3" style="height: 50px;width:50px;position: relative;">
+                                <img alt="" height="50px" src="assets/img/ice-cream.png">
+                            </div>
+                            <div>
+                                <span style="font-size: 15px">Item Name</span>
+                                <h6><span style="font-size: 10px">Item qty : </span>2</h6>
+                            </div>
+                            <hr style="border: solid 1px; height: 50px;">
+                            <span>LKR 1200.00</span>
+                        </div>
+                        <div class="d-flex flex-row justify-content-start align-items-center gap-2 bg-white mb-2 rounded-3"  style="width: 300px;padding-left: 15px">
+                            <div class="d-flex flex-wrap justify-content-center align-items-center rounded-3" style="height: 50px;width:50px;position: relative;">
+                                <img alt="" height="50px" src="assets/img/ice-cream.png">
+                            </div>
+                            <div>
+                                <span style="font-size: 15px">Item Name</span>
+                                <h6><span style="font-size: 10px">Item qty : </span>2</h6>
+                            </div>
+                            <hr style="border: solid 1px; height: 50px;">
+                            <span>LKR 1200.00</span>
+                        </div>
+                        <div class="d-flex flex-row justify-content-start align-items-center gap-2 bg-white mb-2 rounded-3"  style="width: 300px;padding-left: 15px">
+                            <div class="d-flex flex-wrap justify-content-center align-items-center rounded-3" style="height: 50px;width:50px;position: relative;">
+                                <img alt="" height="50px" src="assets/img/ice-cream.png">
+                            </div>
+                            <div>
+                                <span style="font-size: 15px">Item Name</span>
+                                <h6><span style="font-size: 10px">Item qty : </span>2</h6>
+                            </div>
+                            <hr style="border: solid 1px; height: 50px;">
+                            <span>LKR 1200.00</span>
+                        </div>
+                        <div class="d-flex flex-row justify-content-start align-items-center gap-2 bg-white mb-2 rounded-3"  style="width: 300px;padding-left: 15px">
+                            <div class="d-flex flex-wrap justify-content-center align-items-center rounded-3" style="height: 50px;width:50px;position: relative;">
+                                <img alt="" height="50px" src="assets/img/ice-cream.png">
+                            </div>
+                            <div>
+                                <span style="font-size: 15px">Item Name</span>
+                                <h6><span style="font-size: 10px">Item qty : </span>2</h6>
+                            </div>
+                            <hr style="border: solid 1px; height: 50px;">
+                            <span>LKR 1200.00</span>
+                        </div>
+                        <div class="d-flex flex-row justify-content-start align-items-center gap-2 bg-white mb-2 rounded-3"  style="width: 300px;padding-left: 15px">
+                            <div class="d-flex flex-wrap justify-content-center align-items-center rounded-3" style="height: 50px;width:50px;position: relative;">
+                                <img alt="" height="50px" src="assets/img/ice-cream.png">
+                            </div>
+                            <div>
+                                <span style="font-size: 15px">Item Name</span>
+                                <h6><span style="font-size: 10px">Item qty : </span>2</h6>
+                            </div>
+                            <hr style="border: solid 1px; height: 50px;">
+                            <span>LKR 1200.00</span>
+                        </div>
+                        <div class="d-flex flex-row justify-content-start align-items-center gap-2 bg-white mb-2 rounded-3"  style="width: 300px;padding-left: 15px">
+                            <div class="d-flex flex-wrap justify-content-center align-items-center rounded-3" style="height: 50px;width:50px;position: relative;">
+                                <img alt="" height="50px" src="assets/img/ice-cream.png">
+                            </div>
+                            <div>
+                                <span style="font-size: 15px">Item Name</span>
+                                <h6><span style="font-size: 10px">Item qty : </span>2</h6>
+                            </div>
+                            <hr style="border: solid 1px; height: 50px;">
+                            <span>LKR 1200.00</span>
+                        </div>
+                        <div class="d-flex flex-row justify-content-start align-items-center gap-2 bg-white mb-2 rounded-3"  style="width: 300px;padding-left: 15px">
+                            <div class="d-flex flex-wrap justify-content-center align-items-center rounded-3" style="height: 50px;width:50px;position: relative;">
+                                <img alt="" height="50px" src="assets/img/ice-cream.png">
+                            </div>
+                            <div>
+                                <span style="font-size: 15px">Item Name</span>
+                                <h6><span style="font-size: 10px">Item qty : </span>2</h6>
+                            </div>
+                            <hr style="border: solid 1px; height: 50px;">
+                            <span>LKR 1200.00</span>
+                        </div>
+                        <div class="d-flex flex-row justify-content-start align-items-center gap-2 bg-white mb-2 rounded-3"  style="width: 300px;padding-left: 15px">
+                            <div class="d-flex flex-wrap justify-content-center align-items-center rounded-3" style="height: 50px;width:50px;position: relative;">
+                                <img alt="" height="50px" src="assets/img/ice-cream.png">
+                            </div>
+                            <div>
+                                <span style="font-size: 15px">Item Name</span>
+                                <h6><span style="font-size: 10px">Item qty : </span>2</h6>
+                            </div>
+                            <hr style="border: solid 1px; height: 50px;">
+                            <span>LKR 1200.00</span>
+                        </div>
+                        <div class="d-flex flex-row justify-content-start align-items-center gap-2 bg-white mb-2 rounded-3"  style="width: 300px;padding-left: 15px">
+                            <div class="d-flex flex-wrap justify-content-center align-items-center rounded-3" style="height: 50px;width:50px;position: relative;">
+                                <img alt="" height="50px" src="assets/img/ice-cream.png">
+                            </div>
+                            <div>
+                                <span style="font-size: 15px">Item Name</span>
+                                <h6><span style="font-size: 10px">Item qty : </span>2</h6>
+                            </div>
+                            <hr style="border: solid 1px; height: 50px;">
+                            <span>LKR 1200.00</span>
+                        </div>-->
+
+                    </div>
+
+                    <h5 id="order-detail-from-total">Total : 2000.00</h5>
+
+                </section>
+
+            </section>
+
         </section>
 
     </section>
@@ -138,8 +852,14 @@
 
 <script src="js/jquery-3.7.1.min.js"></script>
 <script src="js/db/db.js"></script>
+
 <script src="js/navigation/navigation.js"></script>
 <script src="js/controller/customerFrom.js"></script>
+<script src="js/controller/orderFromController.js"></script>
+<script src="js/controller/homeController.js"></script>
+<script src="js/controller/itemController.js"></script>
+<script src="js/util/CustomAlert.js"></script>
+
 </body>
 
 </html>

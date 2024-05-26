@@ -1,12 +1,108 @@
-.btn{
- background-color: #ffffff;
+.btn {
+    background-color: #ffffff;
 }
-.btn:hover{
+
+.btn:hover {
     background-color: #F0F2FF;
 }
 
-@media only screen and (max-width: 1920px){
-  #customer-from{
-      width: 800px;
-  }
+@media only screen and (max-width: 1920px) {
+    #customer-from {
+        width: 800px;
+    }
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+::-webkit-scrollbar{
+    -webkit-appearance: none;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 4px;
+    background-color: rgba(144, 87, 255, 0.11);
+    box-shadow: 0 0 1px rgba(171, 32, 255, 0.5);
+}
+
+.bg-primary {
+    background-color: rgb(122, 65, 255);
+}
+
+.add-to-cart-btn {
+    background-color: #7a53e6;;
+    border-radius: 4px;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #f0f0f0;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    /*white-space: 2px;*/
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-qty {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    height: 30px;
+    background-color: rgb(125, 117, 145);
+}
+
+#cart-from {
+    width: 540px;
+    height: fit-content;
+     /*border: solid;*/
+    background-color: #f0f0f0;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.pay-btn {
+    background-color: rgb(118, 68, 255);
+    color: #f0f0f0;
+    border-radius: 5px;
+    border: 0;
+    padding: 5px;
+    font-weight: 600;
+    font-size: 25px;
+
+    width: 100%;
+
+}
+
+.total-box {
+    background-color: #ffffff;
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.home-content {
+    display: flex;
+    flex-grow: 1;
+}
+
+#pay-button:disabled{
+    background-color: rgba(118, 68, 255, 0.58);
+}
+#pay-button:focus,#pay-button:hover{
+    transform: scale(1.02);
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in-out;
 }
