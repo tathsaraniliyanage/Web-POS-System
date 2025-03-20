@@ -64,10 +64,10 @@ A web-based Point of Sale (POS) system using HTML, JavaScript, and CSS Bootstrap
 
      ```
      tsc
-     ``
+     ```
 
 
-## Screenshots 🖼️`
+## Screenshots 🖼️
 
 ![Screenshot from 2025-03-21 03-20-02](https://github.com/user-attachments/assets/fa034aab-c643-45da-a702-00b644284d69)
 ![Screenshot from 2025-03-21 03-20-40](https://github.com/user-attachments/assets/2ccdfa04-ca6d-4c91-a5e5-e21fcee0af32)
