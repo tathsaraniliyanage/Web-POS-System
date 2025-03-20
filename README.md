@@ -64,6 +64,6 @@ A web-based Point of Sale (POS) system using HTML, JavaScript, and CSS Bootstrap
 
      ```
      tsc
+     ```
 
 
-Happy Coding ! ✨
