@@ -35,7 +35,7 @@ A web-based Point of Sale (POS) system using HTML, JavaScript, and CSS Bootstrap
 ## Technologies Used 💡
 
 - **HTML**: For structuring the web pages.
-- **TypeScript**: For robust and type-safe JavaScript code.
+- **JavaScript**: For robust code.
 - **CSS Bootstrap**: For styling and responsive design.
 - **Local Storage**: For temporary data persistence (can be replaced with a backend database).
 
