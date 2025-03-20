@@ -45,8 +45,8 @@ A web-based Point of Sale (POS) system using HTML, JavaScript, and CSS Bootstrap
 
 1. **Clone the Repository**:
       ```bash
-      git clone https://github.com/your-username/your-repo-name.git
-      cd your-repo-name
+      git clone https://github.com/tathsaraniliyanage/Web-POS-System.git
+      cd Web-POS-System
 
 2. Install Dependencies:
 
