@@ -1,5 +1,9 @@
 # Web-Based Point of Sale (POS) System 🚀
 
+<h1 align="center">
+    <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=1100&height=70&duration=4000&lines=Web+Pos+System+&color=078179" />
+</h1>
+
 A web-based Point of Sale (POS) system using HTML, JavaScript, and CSS Bootstrap library. The system is designed to manage customers, items, and orders with a user-friendly interface. It provides an intuitive and efficient way for businesses to handle sales, track inventory, and process orders seamlessly.
  The use of Bootstrap ensures a responsive and modern design, while TypeScript enhances code reliability and maintainability. This POS system is ideal for small to medium-sized businesses looking for a streamlined and easy-to-use solution for their sales and inventory management needs.
 
